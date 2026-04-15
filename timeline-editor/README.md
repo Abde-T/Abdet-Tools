@@ -138,12 +138,13 @@ A short demo showing the full editing flow:
 - trimming and splitting
 - real-time playback sync
 - exporting timeline data
-  🎬 [Demo Video](https://youtu.be/tLs2iiQ9oXI)
+  🎬 [Demo Video](https://media.klipflow.com/file/klipflow/showcase.mp4)
+  🎬 [Plug and Play Showcase Video](https://media.klipflow.com/file/klipflow/plug+and+play.mp4)
 
 **🚀 Live Editor**
 Try it instantly in the browser:
 
-- [Barebones Editor](https://youtu.be/tLs2iiQ9oXI) → what you get
+- [Barebones Editor](https://abdet-tools.vercel.app) → what you get
 - [Full SaaS Example](https://www.klipflow.com/timeline) → what you can build
 
 ---

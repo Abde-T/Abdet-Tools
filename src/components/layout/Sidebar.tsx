@@ -116,26 +116,6 @@ const Sidebar = () => {
           </AnimatePresence>
         </button>
       </div>
-
-      {/* Pro Badge */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="mx-4 mb-6 p-4 rounded-2xl bg-gradient-to-br from-indigo-600/20 to-purple-600/20 border border-indigo-500/20"
-          >
-            <div className="flex items-center gap-2 text-indigo-400 mb-1">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider">Pro Access</span>
-            </div>
-            <p className="text-[10px] text-zinc-500 leading-tight">
-              Unlock advanced tools and AI features with the Pro membership.
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.aside>
   );
 };
