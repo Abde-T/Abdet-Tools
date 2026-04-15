@@ -1,0 +1,278 @@
+/* 
+ * 🎨 Timeline Editor - High-Contrast Obsidian & Violet Theme
+ * 
+ */
+
+:root {
+  /* 1. Base Palette Variables (Global so Portals/Modals can see them) */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #f5f5f5;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #e5e5e5;
+  --secondary-foreground: #111111;
+  --muted: #f0f0f0;
+  --muted-foreground: #737373;
+  --accent: #d4d4d4;
+  --accent-foreground: #000000;
+  --destructive: #999999;
+  --destructive-foreground: #ffffff;
+  --border: #000000;
+  --input: #f5f5f5;
+  --ring: #404040;
+  --radius: 0.625rem;
+
+  /* 2. Mapped Variables (Tailwind Compatible) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans, "Inter", system-ui, sans-serif);
+  --font-mono: var(--font-geist-mono, "JetBrains Mono", monospace);
+  --color-sidebar-ring: var(--sidebar-ring, var(--ring));
+  --color-sidebar-border: var(--sidebar-border, var(--border));
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground,
+    var(--accent-foreground)
+  );
+  --color-sidebar-accent: var(--sidebar-accent, var(--accent));
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground,
+    var(--primary-foreground)
+  );
+  --color-sidebar-primary: var(--sidebar-primary, var(--primary));
+  --color-sidebar-foreground: var(--sidebar-foreground, var(--foreground));
+  --color-sidebar: var(--sidebar, var(--card));
+  --color-chart-5: var(--chart-5, #22d3ee);
+  --color-chart-4: var(--chart-4, #fbbf24);
+  --color-chart-3: var(--chart-3, #f87171);
+  --color-chart-2: var(--chart-2, #34d399);
+  --color-chart-1: var(--chart-1, #8b5cf6);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --invert-light: 0;
+  --invert-dark: 1;
+
+  /* 3. Base Color Polyfills */
+  --blue-500: #3b82f6;
+  --green-500: #22c55e;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --orange-500: #f97316;
+  --purple-500: #a855f7;
+  --cyan-500: #06b6d4;
+  --rose-500: #f43f5e;
+  --indigo-500: #6366f1;
+  --slate-950: #020617;
+}
+
+/* ── Scoped Theme Utilities ────────────────────────────────────────────────
+ * All utilities are scoped to .timeline-theme-root to ensure they override 
+ * host project defaults (higher specificity).
+ */
+
+.timeline-theme-root {
+  color-scheme: light;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+/* Backgrounds */
+.timeline-theme-root .bg-background {
+  background-color: var(--background);
+}
+.timeline-theme-root .bg-foreground {
+  background-color: var(--foreground);
+}
+.timeline-theme-root .bg-card {
+  background-color: var(--card);
+}
+.timeline-theme-root .bg-popover {
+  background-color: var(--popover);
+}
+.timeline-theme-root .bg-primary {
+  background-color: var(--primary);
+}
+.timeline-theme-root .bg-secondary {
+  background-color: var(--secondary);
+}
+.timeline-theme-root .bg-muted {
+  background-color: var(--muted);
+}
+.timeline-theme-root .bg-accent {
+  background-color: var(--accent);
+}
+.timeline-theme-root .bg-destructive {
+  background-color: var(--destructive);
+}
+.timeline-theme-root .bg-input {
+  background-color: var(--input);
+}
+.timeline-theme-root .bg-slate-950 {
+  background-color: var(--slate-950);
+}
+
+/* Opacity fallbacks (RGB constants to match White/Black palette) */
+.timeline-theme-root .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.timeline-theme-root .bg-primary\/10 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.timeline-theme-root .bg-primary\/20 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.timeline-theme-root .bg-primary\/90 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.timeline-theme-root .bg-muted\/10 {
+  background-color: rgba(240, 240, 240, 0.1);
+}
+.timeline-theme-root .bg-muted\/20 {
+  background-color: rgba(240, 240, 240, 0.2);
+}
+.timeline-theme-root .bg-muted\/30 {
+  background-color: rgba(240, 240, 240, 0.3);
+}
+.timeline-theme-root .bg-muted\/50 {
+  background-color: rgba(240, 240, 240, 0.5);
+}
+.timeline-theme-root .bg-muted\/80 {
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+/* Text & Colors */
+.timeline-theme-root .text-foreground {
+  color: var(--foreground);
+}
+.timeline-theme-root .text-primary {
+  color: var(--primary);
+}
+.timeline-theme-root .text-primary-foreground {
+  color: var(--primary-foreground);
+}
+.timeline-theme-root .text-secondary-foreground {
+  color: var(--secondary-foreground);
+}
+.timeline-theme-root .text-muted-foreground {
+  color: var(--muted-foreground);
+}
+.timeline-theme-root .text-destructive {
+  color: var(--destructive);
+}
+.timeline-theme-root .text-white {
+  color: #ffffff;
+}
+
+/* Palette Colors */
+.timeline-theme-root .text-blue-500 {
+  color: var(--blue-500);
+}
+.timeline-theme-root .text-green-500 {
+  color: var(--green-500);
+}
+.timeline-theme-root .text-red-500 {
+  color: var(--red-500);
+}
+.timeline-theme-root .text-indigo-500 {
+  color: var(--indigo-500);
+}
+.timeline-theme-root .bg-red-600 {
+  background-color: var(--red-600);
+}
+
+/* Borders & States */
+.timeline-theme-root .border-border {
+  border-color: var(--border);
+}
+.timeline-theme-root .border-input {
+  border-color: var(--input);
+}
+.timeline-theme-root .border-primary {
+  border-color: var(--primary);
+}
+.timeline-theme-root .hover\:bg-primary\/90:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.timeline-theme-root .focus\:bg-accent:focus {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Typography & Layout */
+.timeline-theme-root .rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.timeline-theme-root .rounded-md {
+  border-radius: var(--radius-md);
+}
+.timeline-theme-root .shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Ensure borders are visible inside the root */
+.timeline-theme-root * {
+  border-color: var(--border);
+}
+
+/* ── Typography (Font Faces) ────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./components/mediahub/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bungee";
+  src: url("./components/mediahub/fonts/Bungee-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Luckiest Guy";
+  src: url("./components/mediahub/fonts/LuckiestGuy-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Komika Axis";
+  src: url("./components/mediahub/fonts/KOMIKAX_.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./components/mediahub/fonts/BebasNeue-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "The Bold Font";
+  src: url("./components/mediahub/fonts/THEBOLDFONT-FREEVERSION.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Fredoka";
+  src: url("./components/mediahub/fonts/Fredoka-Bold.ttf") format("truetype");
+}
