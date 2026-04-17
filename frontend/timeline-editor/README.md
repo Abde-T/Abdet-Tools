@@ -144,7 +144,7 @@ A short demo showing the full editing flow:
 **🚀 Live Editor**
 Try it instantly in the browser:
 
-- [Barebones Editor](https://abdet-tools.vercel.app) → what you get
+- [Barebones Editor](https://abdet-tools.vercel.app/timeline) → what you get
 - [Full SaaS Example](https://www.klipflow.com/timeline) → what you can build
 
 ---
