@@ -111,7 +111,7 @@ const HomePage = () => {
               <LayoutTemplate className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold tracking-tight">
-              Abde-T <span className="text-zinc-400 font-medium">Tools</span>
+              Abde Tiamani
             </span>
           </div>
         </div>
@@ -314,10 +314,10 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <LayoutTemplate className="w-5 h-5 text-indigo-400" />
-            <span className="font-bold text-zinc-300">Abde-T Tools</span>
+            <span className="font-bold text-zinc-300">Abde Tiamani Tools</span>
           </div>
           <div className="text-zinc-500 text-sm">
-            © {new Date().getFullYear()} Abde-T. All rights reserved.
+            © {new Date().getFullYear()} Abde Tiamani. All rights reserved.
           </div>
         </div>
       </footer>

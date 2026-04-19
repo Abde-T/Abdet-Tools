@@ -85,7 +85,6 @@ import {
   updateVideoClipThumbnails,
 } from "../../redux/timelineSlice";
 import { cn } from "../../utils/utils";
-import ExportButton from "./components/ExportButton";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -701,8 +700,6 @@ const TimelineInner: React.FC = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <ExportButton />
 
             {/* ── Mobile: show/hide media library button ── */}
             <button

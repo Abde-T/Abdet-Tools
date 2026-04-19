@@ -46,7 +46,7 @@ const Sidebar = () => {
                 className="overflow-hidden"
               >
                 <span className="font-black tracking-tighter text-xl whitespace-nowrap">
-                  AbdeT <span className="text-indigo-500 italic">Tools</span>
+                  Abde Tiamani
                 </span>
               </motion.div>
             )}
